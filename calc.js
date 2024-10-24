@@ -1,9 +1,9 @@
- let soma
+let soma
 let subtraçao
 let mult
 let div
-let n1=parseInt(prompt("indique o primeiro numero:"))
-let n2=parseInt(prompt("Indique seu segundo número "))
+let v1=parseInt(prompt("indique o primeiro numero:"))
+let v2=parseInt(prompt("Indique seu segundo número "))
 
 
 function adiçao(n1,n2){
@@ -22,17 +22,30 @@ function diva(n1,n2){
     div=n1+n2
     return div
 }
-let ope=prompt("qual a operaçao desejada?")
-if(ope=soma){
-    console.log( adiçao)
+function ope(){
+    let valor=prompt("escolha a operaçao que sera efetuada")
+    return valor
 }
-else if(ope=subtraçao){
-    console.log(sub)
-}
-else if(ope=mult){
-    console.log(multp)
-}
-else if(ope=div){
-    console.log(diva)
-}
+   
+let recepçao =ope()
+console.log(recepçao) 
 
+if(recepçao=="soma"){
+    let result=adiçao(v1,v2)
+    console.log(result)
+}
+else if(recepçao=="subtraçao"){
+    let result=sub(v1,v2)
+    console.log(result)
+}
+else if(recepçao=="multiplicaçao"){
+    let result=multp(v1,v2)
+    console.log(result)
+}
+else if(recepçao=="divisao"&& v2!=0){
+    let result=diva(v1,v2)
+    console.log(result)
+}
+else{
+    console.log("essa funçao nao existe")
+}
